@@ -1,0 +1,12 @@
+Open up powersehell / cmd
+navigate to the project foler wher the docker file resides
+
+run the following comannds
+
+docker build --rm -t productive-dev/cloud-customers:latest .
+
+docker run --rm -p 5000:5000 -p 5001:5001 -e ASPNETCORE_HTTP_PORT=https://+:5001 -e ASPNETCORE_URLS=http://+:5000 productive-dev/cloud-customers
+
+
+finally open up browser
+http://localhost:5000/users
